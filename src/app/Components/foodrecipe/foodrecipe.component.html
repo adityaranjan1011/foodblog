@@ -1,0 +1,87 @@
+<div class="foodRecipe-page">
+  <div class="foodtitle">
+    <h1>{{ data.title }}</h1>
+  </div>
+  <div class="recipe-container">
+    <div class="recipe-text">
+      <img src="{{ data.image }}" alt="" class="food-image" />
+
+      <p>
+        {{ data.desc }}
+      </p>
+    </div>
+    <div class="authorDetails">
+      <div class="author-btn">
+        <button mat-raised-button color="primary">Edit</button>
+        <button mat-raised-button color="primary">Update</button>
+        <button mat-raised-button color="primary">Delete</button>
+      </div>
+
+      <div class="author-content">       
+        <div >         
+          <img class="author-image" src="{{ data.image }}" alt=""/>
+        </div>
+        <div class="author-text">
+          <h2>About Author</h2>
+          <p>
+            {{ data.author_detail }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="recipe-list">
+    <div class="list-heading">
+      <div class="list-details">
+        <h2>{{ data.title }}</h2>
+        <div class="author">
+          <label>{{ data.author_label }}:</label
+          ><span>{{ data.author_name }}</span>
+        </div>
+        <div class="author">
+          <label>{{ data.yeilds }}:</label><span> {{ data.quantity }}</span>
+        </div>
+        <div class="list-text">
+          <p>
+            {{ data.food_brief }}
+          </p>
+        </div>
+      </div>
+      <div class="list-image">
+        <img src="assets/image/riceSalad.jpg" alt="" height="150px" />
+      </div>
+    </div>
+    <div>
+      <div class="food-recipe">
+        <h2>{{data.recipe_title}}</h2>
+        <div class="food-recipe-list">
+          <div class="recipeList" *ngFor="let ingre of data.food_details">
+            <span>{{ingre.item}}</span>           
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="instruction">
+      <h2>Instruction</h2>
+      <p>
+        Take a kadai or a wok that’s big enough for tossing the rice. Heat the
+        wok over high heat, then heat the vegetable oil and sesame oil. When the
+        oil is hot enough, add the cumin seeds, green chilli, followed by the
+        turmeric, red chilli powder, curry powder, lime pickle and chopped
+        onions. You want to toss everything together over high heat for 3-4
+        minutes, or until the onions are translucent. Using your hands sprinkle
+        the rice into the hot oil, making sure you break up any balls of rice
+        that may have formed as the rice sat in the refrigerator. Toss the rice
+        well, making sure to coat all the rice in the oil and heat it through.
+        Then, take the rice off the flame and add the coriander leaves, raisins,
+        apple matchsticks, green capsicum and start tossing everything rapidly
+        off heat. Sprinkle over salt and pepper, not being too generous because
+        I’m sure you've salted the rice when cooking it before. Finish with a
+        tablespoon of the honey, toss again. Taste now and adjust the seasoning.
+        Don’t eat it right away, even though I know how tempting this is, and
+        let it refrigerate for a bit before you eat it.
+      </p>
+    </div>
+  </div>
+</div>

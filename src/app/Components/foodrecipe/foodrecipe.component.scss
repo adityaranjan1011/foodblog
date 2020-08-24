@@ -1,0 +1,145 @@
+.foodRecipe-page {
+    height: 100%;
+    text-align: center;
+    color: #302a2c;
+    font-family: "Libre Baskerville", Georgia, serif;
+    .foodtitle {
+        height: 60px;
+        padding: 40px;
+        box-shadow: 2px 2px 2px 2px #888888;
+        h1 {
+            font-size: 4em;
+        }
+    }
+
+    .recipe-container {
+        text-align: left;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+
+        .recipe-text {
+            text-align: justify;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            line-height: 1.8;
+            .food-image {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    .authorDetails {
+        padding: 20px;
+        text-align: center;
+        .author-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .author-content {
+            margin: 0 auto;
+            padding-top: 20px;
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: center;
+            align-content: center;
+
+            .author-image {
+                height: 200px;
+                border-radius: 60px;
+                width: 150px;
+                border: 1px solid;
+            }
+            .author-text {
+                text-align: justify;
+                margin-top: 20px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .recipe-list {
+        padding: 20px;
+        margin: 20px;
+        text-align: left;
+        background-color: antiquewhite;
+        box-shadow: 2px 2px 2px 2px #888888;
+
+        .list-heading {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+            height: 200px;
+        }
+        .list-text {
+            text-align: justify;
+            margin-top: 10px;
+        }
+        .author {
+            color: #959595;
+            font-size: 0.9em;
+            font-weight: 400;
+            margin: 0 0 5px;
+            text-transform: lowercase;
+        }
+        .list-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .food-recipe {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .food-recipe-list {
+        .recipeList {
+            height: 20px;
+            display: grid;
+            grid-template-rows: repeat(1, 1fr);
+            margin-bottom: 10px;
+            line-height: 2;
+            font-weight: 500;
+        }
+    }
+    .instruction {
+        padding: 20px;
+        text-align: justify;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 908px) {
+        .recipe-container{
+            grid-template-columns: none;
+            grid-row-gap: 30px;
+
+            .author-content{
+                padding-top: 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) and (min-width: 560px){
+        .recipe-container{
+            grid-template-columns: none;
+            grid-row-gap: 30px;
+            padding:10px;
+            .recipe-text{
+
+                .food-image{
+
+                    width: 720px;
+                }
+            }
+            .author-content{
+                padding-top: 40px;
+            }
+            
+        }
+    }
+}

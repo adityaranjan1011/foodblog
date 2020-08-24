@@ -1,0 +1,34 @@
+<div class="foodblog">
+  <div class="blogheader">
+    <div class="blog-title">
+      <h1>FOOD BLOG!!!</h1>
+
+      <button class="btn" mat-raised-button color="primary" (click)="addNew()">
+        ADD NEW POST
+      </button>
+    </div>
+  </div>
+
+  <div class="blog-container">
+    <div class="food-card" *ngFor="let cards of foodData">
+      <div class="foodheader">
+        <mat-card-title class="title">{{ cards.title }}</mat-card-title>
+      </div>
+      <img
+        src="{{ cards.image }}"
+        alt="Orange_Cake"
+        class="food-image"
+        routerLink="/foodrecipe"
+      />
+      <div class="food-content">
+        <p>
+         {{cards.desc}}
+        </p>
+      </div>
+      <div class="food-btn">
+        <button mat-raised-button class="btn" routerLink="/food-recipe">Read More</button>
+        <!-- <button mat-button>SHARE</button> -->
+      </div>
+    </div>
+  </div>
+</div>
